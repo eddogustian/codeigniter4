@@ -43,4 +43,14 @@ class BaseController extends Controller
 		// $this->session = \Config\Services::session();
 	}
 
+	public function header($title) 
+	{
+		$data['title'] = $title;
+		echo view('template/header', $data);
+	}
+
+	public function footer() 
+	{
+		echo view('template/footer');
+	}
 }
